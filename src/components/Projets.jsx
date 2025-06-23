@@ -64,6 +64,11 @@ const Prjt = styled.div`
       box-shadow: 0 0 15px ${color__dark};
     }
 
+    .link {
+      color: cyan;
+      font-weight: ${fw__medium};
+    }
+
     @media screen and (max-width: 555px) {
       display: flex;
       flex-direction: column;
@@ -114,7 +119,14 @@ const Projets = () => {
           <span>My Portfolio</span>
           Mon site web portfolio. Représente mon capacité en tant que
           développeur Web, et illusté par mes compétences et connaissances dans
-          la matière.
+          la matière. Lien:{" "}
+          <a
+            className="link"
+            target="blank"
+            href="https://github.com/franckydiagio/portfolio.git"
+          >
+            https://github.com/franckydiagio/portfolio.git
+          </a>
         </motion.p>
       </div>
       <motion.p

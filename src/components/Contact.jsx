@@ -11,7 +11,13 @@ import {
   SubTitle,
 } from "../styles/GlobalStyle";
 import { padding__section } from "../styles/GlobalStyle";
-import { BsFacebook, BsMailbox, BsPhone, BsWhatsapp } from "react-icons/bs";
+import {
+  BsFacebook,
+  BsGithub,
+  BsMailbox,
+  BsPhone,
+  BsWhatsapp,
+} from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const Cta = styled.div`
@@ -78,21 +84,13 @@ const Contact = () => {
           <tr>
             <td>
               <div>
-                <BsFacebook color="blue" />
-                <span>Facebook</span>
-              </div>
-            </td>
-            <td>Jo Jo</td>
-          </tr>
-          <tr>
-            <td>
-              <div>
                 <BsMailbox color="red" />
                 <span>Email</span>
               </div>
             </td>
-            <td>diagioran@gmail.com</td>
+            <td>franckydiagio@gmail.com</td>
           </tr>
+
           <tr>
             <td>
               <div>
@@ -106,11 +104,31 @@ const Contact = () => {
           <tr>
             <td>
               <div>
+                <BsGithub color="" />
+                <span>Github</span>
+              </div>
+            </td>
+            <td>franckydiagio</td>
+          </tr>
+
+          <tr>
+            <td>
+              <div>
                 <BsPhone color={color__light} />
                 <span>Téléphone</span>
               </div>
             </td>
             <td>033 74 953 67 / 038 14 928 84</td>
+          </tr>
+
+          <tr>
+            <td>
+              <div>
+                <BsFacebook color="blue" />
+                <span>Facebook</span>
+              </div>
+            </td>
+            <td>Jo Jo</td>
           </tr>
         </tbody>
       </motion.table>

@@ -182,7 +182,10 @@ const Skills = () => {
             </div>
             <div>
               <FaGit color="" />
-              <p>Utilisant git comme outil de versionning.</p>
+              <p>
+                Utilisant git comme outil de versionning et de colaboration avec
+                les autres développeurs.
+              </p>
             </div>
           </CardContainer2>
         </motion.div>
