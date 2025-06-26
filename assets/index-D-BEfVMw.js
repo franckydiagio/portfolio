@@ -159,7 +159,7 @@ Error generating stack: `+n.message+`
       }
     }
   }
-`,h8=()=>{const[i,a]=lt.useState(!1),s=C.jsxs(C.Fragment,{children:[C.jsx("a",{href:"#home",children:"Mon profile"}),C.jsx("a",{href:"#skills",children:"Mes capacités"}),C.jsx("a",{href:"#projets",children:"Projets réalisés"}),C.jsx("a",{href:"#contact",children:"Me contacter"})]});return C.jsxs(f8,{children:[C.jsx("div",{className:"nav__logo",children:"Portfolio"}),C.jsx("div",{className:"nav__links",children:s}),C.jsxs("div",{className:"nav__sign",children:[i?C.jsx(O4,{onClick:()=>a(!1)}):C.jsx(z4,{onClick:()=>a(!0)}),i&&C.jsx("div",{className:"nav__menu",children:s})]})]})},d8="/portfolio/assets/profil-DMxvPG4O.png",m8=be.header`
+`,h8=()=>{const[i,a]=lt.useState(!1),s=C.jsxs(C.Fragment,{children:[C.jsx("a",{href:"#home",children:"Mon profil"}),C.jsx("a",{href:"#skills",children:"Mes capacités"}),C.jsx("a",{href:"#projets",children:"Projets réalisés"}),C.jsx("a",{href:"#contact",children:"Me contacter"})]});return C.jsxs(f8,{children:[C.jsx("div",{className:"nav__logo",children:"Portfolio"}),C.jsx("div",{className:"nav__links",children:s}),C.jsxs("div",{className:"nav__sign",children:[i?C.jsx(O4,{onClick:()=>a(!1)}):C.jsx(z4,{onClick:()=>a(!0)}),i&&C.jsx("div",{className:"nav__menu",children:s})]})]})},d8="/portfolio/assets/profil-DMxvPG4O.png",m8=be.header`
   margin-top: 2rem;
   display: flex;
   align-items: center;
