@@ -114,7 +114,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const Menu = (
     <>
-      <a href="#home">Mon profile</a>
+      <a href="#home">Mon profil</a>
       <a href="#skills">Mes capacités</a>
       <a href="#projets">Projets réalisés</a>
       <a href="#contact">Me contacter</a>
