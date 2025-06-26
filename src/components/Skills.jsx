@@ -22,9 +22,10 @@ import {
   FaWifi,
   FaJsSquare,
 } from "react-icons/fa";
-import { FaComputer, FaGit, FaHardDrive, FaJsfiddle } from "react-icons/fa6";
+import { FaComputer, FaGit, FaPhp } from "react-icons/fa6";
 import { BsBootstrap } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { SiMysql } from "react-icons/si";
 
 const Skls = styled.div`
   padding: ${padding__section};
@@ -64,17 +65,14 @@ const CardContainer = styled.div`
   gap: 2rem;
 
   div {
-    background: ${color__light};
     border-radius: 4px;
     transition: 0.3s ease-in-out;
-    box-shadow: 1px 1px 30px ${color__dark};
 
     &:hover {
       transform: scale(1.07);
     }
 
     p {
-      background: ${color__secondary};
       margin: 0.3rem;
       text-align: center;
       color: ${color__light};
@@ -84,7 +82,7 @@ const CardContainer = styled.div`
       font-weight: ${fw__medium};
     }
     svg {
-      font-size: 100px;
+      font-size: 80px;
       padding: 0.5rem;
     }
   }
@@ -105,7 +103,7 @@ const CardContainer2 = styled.div`
     svg {
       color: #fff;
       border-radius: 30%;
-      font-size: 90px;
+      font-size: 80px;
       padding: 0.5rem;
     }
 
@@ -148,6 +146,14 @@ const Skills = () => {
             <div>
               <BsBootstrap color="purple" />
               <p>Bootstrap</p>
+            </div>
+            <div>
+              <FaPhp color="blue" />
+              <p>PHP</p>
+            </div>
+            <div>
+              <SiMysql color="cyan" />
+              <p>MySQL</p>
             </div>
           </CardContainer>
         </motion.div>

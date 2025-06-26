@@ -22,7 +22,7 @@ import { motion } from "framer-motion";
 
 const Cta = styled.div`
   margin: ${padding__section};
-  background: ${color__dark};
+  background: #222121;
   border-radius: 10px;
   padding: 1rem;
   font-family: ${font__family};
@@ -84,7 +84,7 @@ const Contact = () => {
           <tr>
             <td>
               <div>
-                <BsMailbox color="red" />
+                <BsMailbox color="lightblue" />
                 <span>Email</span>
               </div>
             </td>
@@ -124,7 +124,7 @@ const Contact = () => {
           <tr>
             <td>
               <div>
-                <BsFacebook color="blue" />
+                <BsFacebook color="cyan" />
                 <span>Facebook</span>
               </div>
             </td>

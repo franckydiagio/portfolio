@@ -10,81 +10,16 @@ import {
   ps__mobile_350,
   ps__mobile_750,
   SubTitle,
+  SubTitle2,
 } from "../styles/GlobalStyle";
 import { easeInOut, motion } from "framer-motion";
 import styled from "styled-components";
 import portfolio from "../assets/my_portfolio.png";
+import { FaLink } from "react-icons/fa";
 
 const Prjt = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-
   padding: ${padding__section};
   font-family: ${font__family};
-  p {
-    text-align: start;
-    color: ${color__light};
-
-    @media screen and (max-width: 550px) {
-      text-align: center;
-    }
-  }
-
-  .projets {
-    display: flex;
-    align-items: center;
-    justify-content: space-between:
-    flex-direction: row;
-    margin: 1rem 0;
-    gap: 3rem;
-    
-    p {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-direction: column;
-      text-align: center;
-      @media screen and (max-width: 555px) {
-        align-items: center;
-        justify-content: center;
-      }
-      
-    span {
-      color: ${color__gold};
-      font-weight: ${fw__medium};
-
-    }
-    }
-
-    img {
-      width: 30%;
-      margin: 0;
-      box-shadow: 0 0 15px ${color__dark};
-    }
-
-    .link {
-      color: cyan;
-      font-weight: ${fw__medium};
-    }
-
-    @media screen and (max-width: 555px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      
-      p {
-      text-align: center;
-      }
-
-      img {
-    width: 100%;      
-      }
-    }
-  }
 
   @media screen and (max-width: 1050px) {
     padding: ${ps__mobile_1050};
@@ -97,6 +32,39 @@ const Prjt = styled.div`
   @media screen and (max-width: 350px) {
     padding: ${ps__mobile_350};
   }
+
+  .projets {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 1rem 0;
+    gap: 2rem;
+
+    div {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      color: ${color__light};
+      font-size: 15px;
+
+      a {
+        text-decoration: none;
+        color: cyan;
+        i {
+          color: ${color__light};
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 850px) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
 `;
 
 const Projets = () => {
@@ -104,40 +72,58 @@ const Projets = () => {
     <Prjt id="projets">
       <SubTitle>Mes Projets</SubTitle>
       <div className="projets">
-        <motion.img
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-          src={portfolio}
-          alt=""
-        />
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <span>My Portfolio</span>
-          Mon site web portfolio. Représente mon capacité en tant que
-          développeur Web, et illusté par mes compétences et connaissances dans
-          la matière. Lien:{" "}
+          <SubTitle2>Mon Portfolio Personnel</SubTitle2>
+          <br />
           <a
             className="link"
             target="blank"
             href="https://github.com/franckydiagio/portfolio.git"
           >
-            https://github.com/franckydiagio/portfolio.git
+            <i>Lien site Web: </i>
+            <FaLink />
+            https://franckydiagio.github.io/portfolio.
           </a>
-        </motion.p>
+          <br />
+          <a
+            className="link"
+            target="blank"
+            href="https://github.com/franckydiagio/portfolio.git"
+          >
+            <i>Lien code sur GitHub: </i>
+            <FaLink />
+            https://github.com/franckydiagio/portfolio.git
+          </a>{" "}
+          <br />
+          <b>Technologie utilisées: </b> React.js (styled-components,
+          framer-motion), HTML, CSS. <br />
+          <b>Description: </b> ce projet est un site Web personnel développé
+          avec React dans le but de présenter mon profil de développeur
+          front-end junior. Il regroupe mes compétences, mes projets, ainsi que
+          mes informations de contact. L'interface est responsive, animamée avec
+          framer-motion, et structurée en plusieurs sections. <br />
+          <b>Objectif: </b> Créer un portfolio moderne et interactif pour
+          démontrer mes compétences techniquees en React et mes capacités à
+          construire une interface utilisateur claire, fuide, responsive et
+          efficace.. <br />
+          <b>Fonctionnalités principales: </b>
+          Navigation dynamique, Animation fuide, Style modulaire et Responsive
+          design pour mobile et desktop.
+        </motion.div>
+        <motion.div>
+          <motion.img
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            src={portfolio}
+            alt=""
+          />
+        </motion.div>
       </div>
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, visualDuration: easeInOut }}
-      >
-        Aucune projets d'entreprise réalisés pour le moment. Mais je croix que
-        mes compétences et connaissances sont largements suffisants pour y
-        contribuer.
-      </motion.p>
     </Prjt>
   );
 };

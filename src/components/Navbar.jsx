@@ -75,7 +75,7 @@ const Nav = styled.nav`
   .nav__menu {
     display: none;
     align-items: flex-end;
-    fustify-content: center;
+    justify-content: center;
     flex-direction: column;
     padding: 1.5rem 2rem;
     border-radius: 4px;
@@ -94,7 +94,7 @@ const Nav = styled.nav`
     @media screen and (max-width: 350px) {
       right: 20px;
       top: 53px;
-      padding: 1.5rem 1.5rem;
+      padding: 2rem 1.5rem;
     }
 
     a {

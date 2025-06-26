@@ -18,8 +18,10 @@ export const SubTitle = styled.h2`
   margin: 1rem 0;
 `;
 
-export const SubTitle2 = styled.h3`
+export const SubTitle2 = styled.p`
   color: #b6a416;
+  font-family: "Great Vibes";
+  font-size: 23px;
 `;
 
 export const color__gold = "#b6a416";
