@@ -1,16 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import {
-  color__dark,
   color__gold,
   color__light,
-  color__secondary,
   font__family,
   fw__medium,
   padding__section,
-  ps__mobile_1050,
-  ps__mobile_350,
-  ps__mobile_750,
   SubTitle,
   SubTitle2,
 } from "../styles/GlobalStyle";
@@ -31,16 +26,10 @@ const Skls = styled.div`
   padding: ${padding__section};
   font-family: ${font__family};
 
-  @media screen and (max-width: 1050px) {
-    padding: ${ps__mobile_1050};
-  }
-
-  @media screen and (max-width: 750px) {
-    padding: ${ps__mobile_750};
-  }
-
-  @media screen and (max-width: 350px) {
-    padding: ${ps__mobile_350};
+  @media screen and (max-width: 850px) {
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -49,10 +38,6 @@ const Section = styled.div`
   justify-content: space-between;
   flex-direction: row;
   gap: 3rem;
-
-  .sub__title {
-    margin-bottom: 1rem;
-  }
 
   @media screen and (max-width: 850px) {
     flex-direction: column;
@@ -80,11 +65,18 @@ const CardContainer = styled.div`
       border-bottom-left-radius: 4px;
       border-bottom-right-radius: 4px;
       font-weight: ${fw__medium};
+      font-size: 15px;
+      line-height: 25px;
     }
     svg {
       font-size: 80px;
       padding: 0.5rem;
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -110,6 +102,8 @@ const CardContainer2 = styled.div`
     p {
       color: ${color__light};
       width: 100%;
+      font-size: 15px;
+      line-height: 25px;
     }
   }
 `;
@@ -117,7 +111,7 @@ const CardContainer2 = styled.div`
 const Skills = () => {
   return (
     <Skls id="skills">
-      <SubTitle>Mes capacités</SubTitle>
+      <SubTitle className="subtitle1">Mes capacités</SubTitle>
 
       <Section>
         <motion.div
@@ -125,7 +119,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <SubTitle2 className="sub__title">Développement Web</SubTitle2>
+          <SubTitle2 className="subtitle2">Développement Web</SubTitle2>
           <CardContainer>
             <div>
               <FaReact color="cyan" />

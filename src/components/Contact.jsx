@@ -1,13 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import {
-  color__dark,
   color__light,
   font__family,
   fw__medium,
-  ps__mobile_1050,
-  ps__mobile_350,
-  ps__mobile_750,
   SubTitle,
 } from "../styles/GlobalStyle";
 import { padding__section } from "../styles/GlobalStyle";
@@ -37,6 +33,7 @@ const Cta = styled.div`
     max-width: 100%;
     td {
       padding: 0.7rem 1rem;
+      font-size: 15px;
 
       div {
         display: flex;
@@ -59,15 +56,11 @@ const Cta = styled.div`
   }
 
   @media screen and (max-width: 1050px) {
-    margin: ${ps__mobile_1050};
+    margin: 1rem 4rem;
   }
 
-  @media screen and (max-width: 750px) {
-    margin: ${ps__mobile_750};
-  }
-
-  @media screen and (max-width: 350px) {
-    margin: ${ps__mobile_350};
+  @media screen and (max-width: 850px) {
+    margin: 1rem 1rem;
   }
 `;
 
@@ -98,7 +91,7 @@ const Contact = () => {
                 <span>Whatsapp</span>
               </div>
             </td>
-            <td>033 74 953 67</td>
+            <td>033 74 953 67 / 038 57 559 93</td>
           </tr>
 
           <tr>
@@ -118,7 +111,7 @@ const Contact = () => {
                 <span>Téléphone</span>
               </div>
             </td>
-            <td>033 74 953 67 / 038 14 928 84</td>
+            <td>033 34 292 95 / 038 57 559 93</td>
           </tr>
 
           <tr>

@@ -1,27 +1,15 @@
 import React from "react";
 import {
-  color__dark,
   color__gold,
   color__light,
   color__teal,
   font__family,
   fw__bold,
-  fw__medium,
   padding__section,
-  ps__mobile_1050,
-  ps__mobile_350,
-  ps__mobile_750,
-  SubTitle,
 } from "../styles/GlobalStyle";
 import profil from "../assets/profil.png";
 import styled from "styled-components";
-import { easeIn, easeInOut, motion } from "framer-motion";
-
-const media850 = `
-  @media screen and (max-width: 850px) {
-    max-width: 100%;
-  }
-`;
+import { motion } from "framer-motion";
 
 const Head = styled.header`
   margin-top: 2rem;
@@ -34,29 +22,13 @@ const Head = styled.header`
   font-family: ${font__family};
   padding: ${padding__section};
 
-  @media screen and (max-width: 1050px) {
-    padding: ${ps__mobile_1050};
-  }
-
-  @media screen and (max-width: 1000px) {
-    padding: ${ps__mobile_1050};
+  @media screen and (max-width: 850px) {
+    padding: 1rem;
     flex-direction: column;
-  }
 
-  @media screen and (max-width: 750px) {
-    padding: ${ps__mobile_750};
-  }
-
-  @media screen and (max-width: 350px) {
-    padding: ${ps__mobile_350};
-
+    h3,
     h1 {
-      font-size: 30px;
-      color: ${color__gold};
-    }
-
-    h3 {
-      font-size: 20px;
+      text-align: center;
     }
   }
 `;
@@ -89,21 +61,11 @@ const Section1 = styled.div`
   p {
     color: ${color__light};
     text-align: start;
-  }
-
-  @media screen and (max-width: 375px) {
-    padding: ${ps__mobile_350};
-
-    h1 {
-      font-size: 35px;
-      color: ${color__gold};
-    }
-
-    h3 {
-      font-size: 16px;
-    }
+    line-height: 25px;
+    font-size: 15px;
   }
 `;
+
 const Section2 = styled.div`
   display: flex;
   align-items: flex-end;
@@ -118,7 +80,6 @@ const Header = () => {
   return (
     <Head id="home">
       <Section1>
-        <SubTitle>Mon profil</SubTitle>
         <motion.h1
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -143,8 +104,8 @@ const Header = () => {
           développement d'interface moderne avec <b>React.js</b>.
           <br />
           Je maîtrise l'écosystème react, notament{" "}
-          <b>react-router-dom, styled-components, axios, ...</b>. Je possède une
-          bonne maîtrise des langages Web de base:{" "}
+          <b>react-router-dom, styled-components,...</b> Je possède une bonne
+          maîtrise des langages Web de base:{" "}
           <b>
             JavaScript, HTML5 et CSS3 et une connaissances moyennes sur le PHP
             et MySQL.

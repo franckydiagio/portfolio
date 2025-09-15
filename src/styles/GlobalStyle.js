@@ -4,7 +4,8 @@ export const GlobalStyle = createGlobalStyle`
   * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
+  font-family: "Inter";
   }
 
   body {
@@ -20,8 +21,8 @@ export const SubTitle = styled.h2`
 
 export const SubTitle2 = styled.p`
   color: #b6a416;
-  font-family: "Great Vibes";
-  font-size: 23px;
+  font-family: "Ephesis";
+  font-size: 30px;
 `;
 
 export const color__gold = "#b6a416";

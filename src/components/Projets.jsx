@@ -1,130 +1,178 @@
 import React from "react";
-import {
-  color__dark,
-  color__gold,
-  color__light,
-  font__family,
-  fw__medium,
-  padding__section,
-  ps__mobile_1050,
-  ps__mobile_350,
-  ps__mobile_750,
-  SubTitle,
-  SubTitle2,
-} from "../styles/GlobalStyle";
-import { easeInOut, motion } from "framer-motion";
 import styled from "styled-components";
-import portfolio from "../assets/my_portfolio.png";
-import { FaLink } from "react-icons/fa";
+import { my_portfolio, gelato } from "../assets/imports";
+import { motion } from "framer-motion";
 
-const Prjt = styled.div`
-  padding: ${padding__section};
-  font-family: ${font__family};
+const ProjetsContainer = styled.div`
+  margin: 1rem 6rem;
+  color: lightgrey;
 
-  @media screen and (max-width: 1050px) {
-    padding: ${ps__mobile_1050};
+  h2 {
+    color: teal;
+    margin-bottom: 1rem;
   }
 
-  @media screen and (max-width: 750px) {
-    padding: ${ps__mobile_750};
-  }
-
-  @media screen and (max-width: 350px) {
-    padding: ${ps__mobile_350};
+  hr {
+    margin: 1rem 0;
   }
 
   .projets {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     flex-direction: row;
-    margin: 1rem 0;
     gap: 2rem;
 
-    div {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      color: ${color__light};
-      font-size: 15px;
+    img {
+      width: 350px;
+      height: auto;
+      box-shadow: 0 2px 5px #fff;
+    }
 
-      a {
-        text-decoration: none;
-        color: cyan;
-        i {
-          color: ${color__light};
-        }
-      }
+    p {
+      font-size: 15px;
+    }
+
+    a {
+      font-size: 15px;
+      color: #5962e7;
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    margin: 1rem 4rem;
+    .projets {
+      flex-direction: column;
 
       img {
         width: 100%;
+        height: auto;
       }
     }
+  }
 
-    @media screen and (max-width: 850px) {
+  @media screen and (max-width: 850px) {
+    margin: 1rem 1rem;
+    .projets {
       flex-direction: column;
-      gap: 3rem;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 `;
 
 const Projets = () => {
   return (
-    <Prjt id="projets">
-      <SubTitle>Mes Projets</SubTitle>
-      <div className="projets">
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          <SubTitle2>Mon Portfolio Personnel</SubTitle2>
+    <ProjetsContainer id="projets">
+      <h2>Mes projets</h2>
+
+      {/* GELATO BELLA */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="projets"
+      >
+        <div className="container1">
+          <img src={gelato} alt="image_projet_gelato-bella" />
+        </div>
+
+        <div className="container2">
+          <h3>Gelato-Bella : Site Vitrine</h3>
           <br />
-          <a
-            className="link"
-            target="blank"
-            href="https://github.com/franckydiagio/portfolio.git"
-          >
-            <i>Lien site Web: </i>
-            <FaLink />
-            https://franckydiagio.github.io/portfolio.
-          </a>
+          <h4>Description: </h4>
+          <p>Site Web vitrine d'un vendeur de glace artisanale italienne.</p>
           <br />
-          <a
-            className="link"
-            target="blank"
-            href="https://github.com/franckydiagio/portfolio.git"
-          >
-            <i>Lien code sur GitHub: </i>
-            <FaLink />
-            https://github.com/franckydiagio/portfolio.git
-          </a>{" "}
+          <h4>Objectifs de création:</h4>
+          <p>
+            Cibler les clients, partenariat, et représentation d'identité de
+            l'entreprise (existance, contact, spécialités, nouveautés).
+          </p>
           <br />
-          <b>Technologie utilisées: </b> React.js (styled-components,
-          framer-motion), HTML, CSS. <br />
-          <b>Description: </b> ce projet est un site Web personnel développé
-          avec React dans le but de présenter mon profil de développeur
-          front-end junior. Il regroupe mes compétences, mes projets, ainsi que
-          mes informations de contact. L'interface est responsive, animamée avec
-          framer-motion, et structurée en plusieurs sections. <br />
-          <b>Objectif: </b> Créer un portfolio moderne et interactif pour
-          démontrer mes compétences techniquees en React et mes capacités à
-          construire une interface utilisateur claire, fuide, responsive et
-          efficace.. <br />
-          <b>Fonctionnalités principales: </b>
-          Navigation dynamique, Animation fuide, Style modulaire et Responsive
-          design pour mobile et desktop.
-        </motion.div>
-        <motion.div>
-          <motion.img
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            src={portfolio}
-            alt=""
-          />
-        </motion.div>
-      </div>
-    </Prjt>
+          <h4>Fonctionnalité: </h4>
+          <p>Animation fluide, responsive design et navigation dynamique.</p>
+          <br />
+          <h4>Date de développement:</h4>
+          <p>Septembre 2025</p>
+          <br />
+          <h4>Dernière modification (date): </h4>
+          <p>-</p>
+          <br />
+          <h4>Code: </h4>
+          <p>
+            <a href="https://frackydiagio/gelato-bella.git" target="blank">
+              https://frackydiagio/gelato-bella.git
+            </a>
+          </p>
+          <br />
+          <h4>Démo</h4>
+          <p>
+            <a
+              href="https://franckydiagio.github.io/gelato-bella"
+              target="blank"
+            >
+              https://franckydiagio.github.io/gelato-bella
+            </a>
+          </p>
+        </div>
+      </motion.div>
+
+      <hr />
+
+      {/* PORTFOLIO PERSONNEL */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="projets"
+      >
+        <div className="container1">
+          <img src={my_portfolio} alt="image_projet_portfolio" />
+        </div>
+
+        <div className="container2">
+          <h3>Portfolio personnel</h3>
+          <h4>Description: </h4>
+          <p>
+            Mon premier site Web crée en react qui regroupe mes capacitées de
+            développeur en react.
+          </p>
+          <br />
+          <h4>Objectifs de création:</h4>
+          <p>
+            Mettre en avant mes compétence en tant que développeur front-end, et
+            représentation de mon profil de développeur.
+          </p>
+          <br />
+          <h4>Fonctionnalité: </h4>
+          <p>Animation fluide, responsive design et navigation dynamique.</p>
+          <br />
+          <h4>Date de développement:</h4>
+          <p>Mai 2025</p>
+          <br />
+          <h4>Dernière modification (date): </h4>
+          <p>Aoùt 2025</p>
+          <br />
+          <h4>Code: </h4>
+          <p>
+            <a href="https://frackydiagio/portfolio.git" target="blank">
+              https://frackydiagio/portfolio.git
+            </a>
+          </p>
+          <br />
+          <h4>Démo</h4>
+          <p>
+            <a href="https://franckydiagio.github.io/portfolio" target="blank">
+              https://franckydiagio.github.io/portfolio
+            </a>
+          </p>
+        </div>
+      </motion.div>
+    </ProjetsContainer>
   );
 };
 
