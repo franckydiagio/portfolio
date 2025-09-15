@@ -104,7 +104,10 @@ const Projets = () => {
           <br />
           <h4>Code: </h4>
           <p>
-            <a href="https://frackydiagio/gelato-bella.git" target="blank">
+            <a
+              href="https://github.com/franckydiagio/gelato-bella.git"
+              target="blank"
+            >
               https://frackydiagio/gelato-bella.git
             </a>
           </p>
@@ -159,7 +162,10 @@ const Projets = () => {
           <br />
           <h4>Code: </h4>
           <p>
-            <a href="https://frackydiagio/portfolio.git" target="blank">
+            <a
+              href="https://github.com/franckydiagio/portfolio.git"
+              target="blank"
+            >
               https://frackydiagio/portfolio.git
             </a>
           </p>

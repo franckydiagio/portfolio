@@ -3,13 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
-  },
   "dependencies": {
     "framer-motion": "^12.9.7",
     "react": "^19.1.0",
@@ -32,7 +25,11 @@
     "vite": "^6.3.5"
   },
   "homepage": "https://franckydiagio.github.io/portfolio",
-  "scrips": {
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   }
